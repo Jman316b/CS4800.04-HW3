@@ -1,0 +1,68 @@
+@startuml
+object "<u>phpdemo1:Folder</u>" as p{
+    name = "php demo1"
+    subFolders = Source Files, Include Path, Remote Files
+    subFiles = NULL
+}
+
+object "<u>Source Files:Folder</u>" as sf{
+    name = "Source Files"
+    subFolders = .phalcon, cache, public
+    subFiles = NULL
+}
+
+object "<u>.phalcon:Folder</u>" as ph{
+    name = ".phalcon"
+    subFolders = NULL
+    subFiles = NULL
+}
+
+object "<u>cache:Folder</u>" as c{
+    name = "cache"
+    subFolders = NULL
+    subFiles = NULL
+}
+
+object "<u>public:Folder</u>" as pc{
+    name = "public"
+    subFolders = NULL
+    subFiles = NULL
+}
+
+object "<u>.htaccess:File</u>" as hta{
+    name = ".htaccess"
+}
+
+object "<u>.htrouter.php:File</u>" as htr{
+    name = ".htrouter.php"
+}
+
+object "<u>index.html:File</u>" as i{
+    name = "index.html"
+}
+
+object "<u>Include Path:Folder</u>" as ip{
+    name = "Include Path"
+    subFolders = NULL
+    subFiles = NULL
+}
+
+object "<u>Remote Files:Folder</u>" as rf{
+    name = "Remote Files"
+    subFolders = NULL
+    subFiles = NULL
+}
+
+p *-- sf
+
+sf *-- ph
+sf *-- c
+sf *-- pc
+
+pc *-- hta
+pc *-- htr
+pc *-- i
+
+p *-- ip
+p *-- rf
+@enduml

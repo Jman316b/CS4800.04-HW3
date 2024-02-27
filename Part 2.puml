@@ -1,0 +1,18 @@
+@startuml
+object "<u>Queen Victoria:Ship</u>" as qv{
+    name = "Queen Victoria"
+    year = "1989"
+}
+
+object "<u>Queen Mary:CruiseShip</u>" as qm{
+    name = "Queen Mary"
+    year = "1992"
+    maxNumbOfPassangers = 245
+}
+
+object "<u>Sparrow:CargoShip</u>" as s{
+    name = "Sparrow"
+    year = "2002"
+    cargoCapacity = 300
+}
+@enduml
