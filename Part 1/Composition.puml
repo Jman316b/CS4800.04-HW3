@@ -1,0 +1,33 @@
+@startuml
+Folder *-- File
+Folder *-- Folder
+
+class Folder {
+    - String name
+    - ArrayList<Folder> subFolders
+    - ArrayList<File> subFiles
+
+    + Folder(String name)
+    + String getName()
+    + void setName(String name)
+    + ArrayList<Folder> getSubFolders()
+    + void addSubFolder(String name)
+    + void addSubFolder(String subFolder, String name)
+    + void deleteSubFolder(String subFolder)
+    + ArrayList<File> getSubFiles()
+    + void addSubFile(String name)
+    + void addSubFile(String subFolder, String name)
+    + String toString()
+    + String toString(int indentLevel)
+}
+
+class File {
+    - String name
+
+    + File(String name)
+    + String getName()
+    + void setName(String name)
+    + String toString()
+    + String toString(int indentLevel)
+}
+@enduml

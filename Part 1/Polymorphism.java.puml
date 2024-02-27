@@ -1,0 +1,34 @@
+@startuml
+Ship <|-- CargoShip
+Ship <|-- CruiseShip
+
+class Ship {
+    # String name
+    # String year
+
+    + Ship(String name, String year)
+    + String getName()
+    + void setName(String name)
+    + String getYear()
+    + void setYear(String year)
+    + String toString()
+}
+
+class CargoShip {
+    # int cargoCapacity
+
+    + CargoShip(String name, String year, int cargoCapacity)
+    + int getTonnage()
+    + void setTonnage(int cargoCapacity)
+    + String toString()
+}
+
+class CruiseShip {
+    # int maxNumbOfPassangers
+
+    + CruiseShip(String name, String year, int maxNumbOfPassangers)
+    + int getMaxNumbOfPassangers()
+    + void setMaxNumbOfPassangers(int maxNumbOfPassangers)
+    + String toString()
+}
+@enduml

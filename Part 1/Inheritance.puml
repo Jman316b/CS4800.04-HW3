@@ -1,0 +1,64 @@
+@startuml
+Employee <|-- BaseEmployee
+Employee <|-- CommissionEmployee
+Employee <|-- HourlyEmployee
+Employee <|-- SalariedEmployee
+
+class Employee {
+    # String firstName
+    # String lastName
+    # String ssn
+
+    + Employee(String firstName, String lastName, String SSN)
+    + void setFirstName(String firstName)
+    + String getFirstName()
+    + void setLastName(String lastName)
+    + String getLastName()
+    + void setSSN(String SSN)
+    + String getSSN()
+    + String toString()
+
+}
+
+class BaseEmployee {
+    # int baseSalary
+
+    + BaseEmployee(String firstName, String lastName, String SSN, int baseSalary)
+    + void setBaseSalary(int baseSalary)
+    + int getBaseSalary()
+    + String toString()
+}
+
+class CommissionEmployee {
+    # int commissionRate
+    # int grossSales
+
+    + CommissionEmployee(String firstName, String lastName, String SSN, int commissionRate, int grossSales)
+    + void setCommissionRate(int commissionRate)
+    + int getCommissionRate()
+    + void setGrossSales(int grossSales)
+    + int getGrossSales()
+    + String toString()
+}
+
+class HourlyEmployee {
+    # int wage
+    # int hoursWorked
+
+    + HourlyEmployee(String firstName, String lastName, String SSN, int wage, int hoursWorked)
+    + void setWage(int wage)
+    + int getWage()
+    + void setHoursWorked(int hoursWorked)
+    + int getHoursWorked()
+    + String toString()
+}
+
+class SalariedEmployee {
+    # int weeklySalary
+
+    + SalariedEmployee(String firstName, String lastName, String SSN, int weeklySalary)
+    + void setgetWeeklySalary(int weeklySalary)
+    + int getWeeklySalary()
+    + String toString()
+}
+@enduml
